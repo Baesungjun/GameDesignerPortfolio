@@ -2,36 +2,42 @@
 
 import { motion } from 'framer-motion';
 import { skillCategories, Skill } from '@/data/skills';
-import Image from 'next/image';
 
 const SkillCard = ({ skill }: { skill: Skill }) => {
     return (
-        <div className="flex items-center justify-between bg-slate-900 border border-slate-800 p-4 rounded-xl hover:border-indigo-500/50 transition-colors group">
-            <div className="flex items-center gap-3">
-                <div className="relative w-8 h-8 flex-shrink-0 bg-white/10 rounded-lg p-1">
-                    {/* Fallback to simple img if domain config issue persists, or just standard img for external icons */}
-                    <img
-                        src={skill.icon}
-                        alt={skill.name}
-                        className="w-full h-full object-contain"
-                    />
+        <div className="bg-slate-900 border border-slate-800 p-4 rounded-xl hover:border-indigo-500/50 transition-colors h-full flex flex-col">
+            {/* Top Row: Icon, Name, Level */}
+            <div className="flex items-center justify-between mb-3">
+                <div className="flex items-center gap-3">
+                    <div className="relative w-8 h-8 flex-shrink-0 bg-white/10 rounded-lg p-1">
+                        <img
+                            src={skill.icon}
+                            alt={skill.name}
+                            className="w-full h-full object-cover rounded-sm"
+                        />
+                    </div>
+                    <span className="font-semibold text-slate-200">
+                        {skill.name}
+                    </span>
                 </div>
-                <span className="font-semibold text-slate-200 group-hover:text-white transition-colors">
-                    {skill.name}
-                </span>
+
+                <div className="flex gap-1">
+                    {[1, 2, 3, 4, 5].map((level) => (
+                        <div
+                            key={level}
+                            className={`w-2 h-2 sm:w-2.5 sm:h-2.5 rounded-[1px] ${level <= skill.level
+                                ? 'bg-indigo-500'
+                                : 'bg-slate-700'
+                                }`}
+                        />
+                    ))}
+                </div>
             </div>
 
-            <div className="flex gap-1">
-                {[1, 2, 3, 4, 5].map((level) => (
-                    <div
-                        key={level}
-                        className={`w-3 h-3 sm:w-4 sm:h-4 rounded-sm transition-colors ${level <= skill.level
-                                ? 'bg-indigo-500'
-                                : 'bg-slate-800'
-                            }`}
-                    />
-                ))}
-            </div>
+            {/* Bottom Row: Description (Always Visible) */}
+            <p className="text-xs sm:text-sm text-slate-400 leading-relaxed break-keep">
+                {skill.description}
+            </p>
         </div>
     );
 };
@@ -51,11 +57,11 @@ export default function SkillsSection() {
                         Skills & Tools
                     </h2>
                     <p className="text-slate-400">
-                        실무에서 활용 가능한 기술 스택입니다.
+                        보유한 기술 스택과 상세 역량입니다.
                     </p>
                 </motion.div>
 
-                <div className="grid grid-cols-1 lg:grid-cols-2 gap-x-12 gap-y-12">
+                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                     {skillCategories.map((category, idx) => (
                         <motion.div
                             key={category.title}
@@ -64,10 +70,10 @@ export default function SkillsSection() {
                             viewport={{ once: true }}
                             transition={{ delay: idx * 0.1 }}
                         >
-                            <h3 className="text-xl font-bold text-indigo-400 mb-6 flex items-center gap-2">
+                            <h3 className="text-xl font-bold text-indigo-400 mb-4 flex items-center gap-2 border-b border-slate-800 pb-2">
                                 {category.title}
                             </h3>
-                            <div className="grid grid-cols-1 xs:grid-cols-2 gap-4">
+                            <div className="flex flex-col gap-4">
                                 {category.skills.map((skill) => (
                                     <SkillCard key={skill.name} skill={skill} />
                                 ))}

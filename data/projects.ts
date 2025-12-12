@@ -25,10 +25,10 @@ export const projects: Project[] = [
         description: "기획 4명, 개발 6명이 협업하여 실제 기업 미션을 완수한 프로젝트입니다.",
         contribution: "메인 시스템 기획, 기믹 설계, 레벨 디자인",
         videoUrls: ["https://youtu.be/ewKqFxTd8Iw?si=9pP2691jEo5QriHx"], // Need real ID from user later
-        gddUrl: "/gdd/team.pdf",
+        gddUrl: "/gdd/coco.pdf",
         roleText: "메인 시스템 기획, 레벨 디자인, 로직 설계 등 전반적인 개발 과정에 참여하였습니다.",
         details: {
-            overview: "기업의 실제 미션을 받아 진행한 산학 협력 프로젝트입니다. 메인 시스템 기획과 레벨 디자인을 담당하였습니다. 기믹의 로직 설계를 구조화하여 개발팀과의 협업에 기여하였습니다.",
+            overview: "기업의 실제 미션을 받아 진행한 기업 협약 프로젝트입니다. 메인 시스템 기획과 레벨 디자인을 담당하였습니다. 기믹의 로직 설계를 구조화하여 개발팀과의 협업에 기여하였습니다.",
             features: [
                 "메인 기믹 시스템 로직 설계",
                 "맵 에디터 설계 및 레벨 디자인"
@@ -49,8 +49,8 @@ export const projects: Project[] = [
         details: {
             overview: "데브시스터즈 신입 공채 과제 전형 제출물입니다. 기존 IP의 핵심 재미 요소인 '캐주얼함'과 '전략성'을 분석하여 신규 캐릭터 2종의 컨셉과 스킬 메커니즘을 제안했습니다.",
             features: [
-                "기존 IP 분석을 통한 캐릭터 컨셉 도출",
-                "스킬 메커니즘 및 상세 스펙 설계"
+                "기존 IP를 분석해 기존에 없는 새로운 캐릭터 컨셉 도출",
+                "스킬 메커니즘 및 신규 아티펙트 상세 스펙 설계"
             ]
         }
     },
@@ -68,9 +68,10 @@ export const projects: Project[] = [
         details: {
             overview: "액션 장르 외에 캐주얼 장르에 도전하기 위해 기획한 프로젝트입니다. 컨셉 기획서, 시스템 기획서 작성 후 유니티 엔진으로 직접 구현했습니다. 인게임 플로우 차트 설계부터 구글 스토어 출시 준비까지 전 과정을 경험했습니다.",
             features: [
-                "Unity 엔진을 활용한 1인 개발",
+                "Unity 엔진과 AI를 활용한 1인 개발",
                 "인게임 플로우 및 시스템 기획",
-                "구글 스토어 출시 프로세스 경험"
+                "구글 스토어 출시 프로세스 경험",
+                "모바일 환경에 맞는 최적화 경험"
             ]
         }
     },
@@ -80,7 +81,7 @@ export const projects: Project[] = [
         genre: "2D Action",
         thumbnail: "/images/touche.png", // Assuming filename
         tags: ["GameMaker2", "액션"],
-        description: "첫 프로젝트의 아쉬움을 보완하여 완성도를 높인 액션 게임입니다.",
+        description: "첫 프로젝트의 실패와 아쉬움을 보완하여 완성도를 높인 액션 게임입니다.",
         contribution: "기획 및 개발 (1인 개발)",
         videoUrls: [
             "https://www.youtube.com/watch?v=1HZCqtmvvCM", // Main Video
@@ -100,7 +101,7 @@ export const projects: Project[] = [
     {
         id: 5,
         title: "나비탭 (Navi-Tab)",
-        genre: "Post-Mortem",
+        genre: "2D Action",
         thumbnail: "/images/navi.png", // Assuming filename
         tags: ["Post-Mortem", "첫 프로젝트"],
         description: "기획 입문작. 실패 경험을 통한 성장 과정을 담았습니다.",
