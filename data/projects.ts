@@ -62,7 +62,7 @@ export const projects: Project[] = [
         tags: ["Unity 개발", "시스템 기획"],
         description: "유니티를 활용해 직접 개발한 캐주얼 디펜스 게임입니다.",
         contribution: "컨셉/시스템 기획, Unity 구현, 레벨 디자인, 출시 준비",
-        videoUrls: [],
+        videoUrls: ["https://youtu.be/PlBLn5tRaBM"],
         gddUrl: "/gdd/poker.pdf",
         roleText: "1인 개발 프로젝트로서 기획, 프로그래밍, 아트 리소스 관리 등 개발의 모든 과정을 단독으로 수행하였습니다.",
         details: {
