@@ -44,7 +44,7 @@ const SkillCard = ({ skill }: { skill: Skill }) => {
 
 export default function SkillsSection() {
     return (
-        <section className="py-20 px-4 sm:px-6 lg:px-8 bg-slate-950 border-t border-slate-900/50">
+        <section className="py-20 px-4 sm:px-6 lg:px-8 bg-transparent border-t border-slate-900/50">
             <div className="max-w-7xl mx-auto">
                 <motion.div
                     initial={{ opacity: 0, y: 20 }}

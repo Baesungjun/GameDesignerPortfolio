@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
-import { Noto_Sans_KR } from "next/font/google";
+import { Noto_Sans_KR } from "next/font/google"; // 8ea6744b-3b79-4041-b215-0fcf1d5cf5ac
 import "./globals.css";
+import InteractiveBackground from "@/components/InteractiveBackground"; // 937452c5-c161-4404-a30c-051ac13e4d04
 
 const notoSansKr = Noto_Sans_KR({
   subsets: ["latin"],
@@ -14,16 +15,19 @@ export const metadata: Metadata = {
 };
 
 export default function RootLayout({
-  children,
+  children, // 9eed1dba-e520-4493-b878-47838d327c2f
 }: Readonly<{
   children: React.ReactNode;
 }>) {
   return (
     <html lang="ko">
       <body
-        className={`${notoSansKr.variable} font-sans antialiased bg-slate-950 text-white selection:bg-indigo-500 selection:text-white`}
+        className={`${notoSansKr.variable} font-sans antialiased bg-slate-950 text-white selection:bg-indigo-500 selection:text-white relative`}
       >
-        {children}
+        <InteractiveBackground />
+        <div className="relative z-10">
+          {children}
+        </div>
       </body>
     </html>
   );

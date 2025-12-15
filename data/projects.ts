@@ -56,7 +56,7 @@ export const projects: Project[] = [
     },
     {
         id: 3,
-        title: "쓰리 포커 디펜스",
+        title: "Three Poker Defense",
         genre: "Casual Defense",
         thumbnail: "/images/poker.png", // Assuming filename based on context
         tags: ["Unity 개발", "시스템 기획"],
@@ -77,7 +77,7 @@ export const projects: Project[] = [
     },
     {
         id: 4,
-        title: "2D 액션 '투셰(Touché)'",
+        title: "2D 액션 투셰(Touché)",
         genre: "2D Action",
         thumbnail: "/images/touche.png", // Assuming filename
         tags: ["GameMaker2", "액션"],
@@ -100,8 +100,8 @@ export const projects: Project[] = [
     },
     {
         id: 5,
-        title: "나비탭 (Navi-Tab)",
-        genre: "2D Action",
+        title: "나비탭",
+        genre: "2D Action Platformer",
         thumbnail: "/images/navi.png", // Assuming filename
         tags: ["Post-Mortem", "첫 프로젝트"],
         description: "기획 입문작. 실패 경험을 통한 성장 과정을 담았습니다.",
